@@ -1,4 +1,5 @@
 # KISSAN_CONNECT 
+
 Kissan_Connect is a project aimed at connecting farmers directly with Retailers, cutting out intermediaries and ensuring fair prices for both parties.
 
 Our moto itself is Streamlining the agricultural delivery Pipeline with advanced technology and modern practices.
@@ -7,11 +8,12 @@ Our team, TOP_G, has been working tirelessly on this project, developing an app 
 
 
 # PROBLEM FETCHED
+
 Farmers faces challenges such as uncertain income, delayed payments, limited access to business information, production wastage and inefficient distribution system.
 
 The conventional supply chain suffers from lack of organisation, significant amount of food wastage and is highly inefficient.
 
-#IMPLEMENTATION
+# IMPLEMENTATION
 
 1. Google Firebase : Manage user authentication, real-time database, cloud storage
 2. Google TensorFlow : M/L model to Predict accurate “Suggestive Pricing” of each food product according to
