@@ -11,19 +11,18 @@ Farmers faces challenges such as uncertain income, delayed payments, limited acc
 
 The conventional supply chain suffers from lack of organisation, significant amount of food wastage and is highly inefficient.
 
-#IMPLEMENTATIOn
+#IMPLEMENTATION
 
-●Implementation of each technical components to build the project:
-> Google Firebase : Manage user authentication, real-time database, cloud storage
-> Google TensorFlow : M/L model to Predict accurate “Suggestive Pricing” of each food product according to
+1. Google Firebase : Manage user authentication, real-time database, cloud storage
+2. Google TensorFlow : M/L model to Predict accurate “Suggestive Pricing” of each food product according to
 region, season, quality, etc
-> React Native: Used to build our cross-platform mobile application that works on both iOS and Android
+3. React Native: Used to build our cross-platform mobile application that works on both iOS and Android
 devices
-> ReactJS: Used to build the frontend of our Executive dashboard for inventory management and bidding
+4. ReactJS: Used to build the frontend of our Executive dashboard for inventory management and bidding
 operations
-> Firebase Cloud Messaging (FCM): FCM is used to send push notifications to users about new inventory,
+5. Firebase Cloud Messaging (FCM): FCM is used to send push notifications to users about new inventory,
 biddings, enlisting approvals and other events in the application
-> Google Pay: Used to facilitate transactions between retailers and customers
-> Google App Engine: Used to host and scale our application backend.
+6. Google Pay: Used to facilitate transactions between retailers and customers
+7. Google App Engine: Used to host and scale our application backend.
 
 
