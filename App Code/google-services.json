@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "556496590081",
+    "project_id": "kishanconnect-32c62",
+    "storage_bucket": "kishanconnect-32c62.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:556496590081:android:7c0f71c13bf896334d3700",
+        "android_client_info": {
+          "package_name": "com.kishanConnect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "556496590081-s2pp91ucgh7nr5seqpl6qebse3a0e6f9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASiXzM_C1WWU4qjfRCAR8iCblHnk37Kbw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "556496590081-s2pp91ucgh7nr5seqpl6qebse3a0e6f9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

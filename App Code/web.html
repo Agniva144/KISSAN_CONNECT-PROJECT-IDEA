@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My Web Page</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+      }
+      h1 {
+        margin: 0;
+      }
+      nav {
+        background-color: #f2f2f2;
+        padding: 10px;
+      }
+      nav a {
+        display: inline-block;
+        padding: 5px 10px;
+        text-decoration: none;
+        color: black;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-right: 10px;
+      }
+      nav a:hover {
+        background-color: #ccc;
+      }
+      section {
+        padding: 10px;
+      }
+      .content {
+        background-color: white;
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+      .content h2 {
+        margin-top: 0;
+      }
+      .hide {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>My Web Page</h1>
+    </header>
+    <nav>
+      <a href="#" class="active" onclick="showContent('demand')">Demand</a>
+      <a href="#" onclick="showContent('produce')">Produce</a>
+      <a href="#" onclick="showContent('upload')">Upload</a>
+    </nav>
+    <section>
+      <div id="demand" class="content">
+        <h2>Demand</h2>
+        <ul id="dataList"></ul>
+        <script src="https://www.gstatic.com/firebasejs/9.6.5/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.6.5/firebase-database.js"></script>
+        <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyASiXzM_C1WWU4qjfRCAR8iCblHnk37Kbw",
+            databaseURL: "https://kishanconnect-32c62-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: 'kishanconnect-32c62',
+            appId: "1:556496590081:android:7c0f71c13bf896334d3700" 
+        }; 
+        firebase.initializeApp(firebaseConfig);
+
+        const dataList = document.getElementById('dataList');
+        const dbRef = firebase.database().ref('Farmers');
+        dbRef.on('value', snap => {
+            dataList.innerHTML = '';
+            snap.forEach(childSnap => {
+            const li = document.createElement('li');
+            li.innerText = childSnap.val().name;
+            dataList.appendChild(li);
+            });
+        });
+        </script>
+        </div>
+      <div id="produce" class="content hide">
+        <h2>Produce</h2>
+        <p>This is the produce page.</p>
+      </div>
+      <div id="upload" class="content hide">
+        <h2>Upload</h2>
+        <p>This is the upload page.</p>
+      </div>
+    </section>
+    <script>
+      function showContent(id) {
+        const contents = document.querySelectorAll('.content');
+        const navLinks = document.querySelectorAll('nav a');
+        for (let i = 0; i < contents.length; i++) {
+          if (contents[i].id === id) {
+            contents[i].classList.remove('hide');
+          } else {
+            contents[i].classList.add('hide');
+          }
+        }
+        for (let i = 0; i < navLinks.length; i++) {
+          if (navLinks[i].href.split('#')[1] === id) {
+            navLinks[i].classList.add('active');
+          } else {
+            navLinks[i].classList.remove('active');
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
